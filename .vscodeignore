@@ -1,0 +1,33 @@
+# Everything listed here is kept out of the packaged .vsix.
+# Patterns are deliberately rooted rather than globbed with **, so that they
+# cannot reach into node_modules: tsxml ships its TypeScript sources next to
+# the compiled build/ directory it actually loads at runtime.
+
+# Sources and build configuration — only out/ is needed at runtime.
+src/**
+tsconfig.json
+tslint.json
+out/**/*.map
+
+# Editor and repository metadata.
+.vscode/**
+.vscode-test/**
+.gitignore
+.vscodeignore
+package-lock.json
+
+# Contributor documentation. README.md is kept: it is the Marketplace page.
+AGENTS.md
+CLAUDE.md
+
+# Build artefacts and local noise.
+*.vsix
+**/.DS_Store
+
+# tsxml ships its test suite and TypeScript sources alongside the compiled
+# build/ directory that its package main actually loads. Dropping them halves
+# the .vsix; build/ itself is left untouched.
+node_modules/tsxml/tests/**
+node_modules/tsxml/src/**
+node_modules/tsxml/examples/**
+node_modules/tsxml/.vscode/**
