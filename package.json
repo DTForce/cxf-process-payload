@@ -4,6 +4,7 @@
     "description": "Format CXF payloads",
     "version": "0.3.2",
     "publisher": "dtforce",
+    "license": "Apache-2.0",
     "repository": "https://github.com/DTForce/cxf-process-payload",
     "engines": {
         "vscode": "^1.32.0"
@@ -39,7 +40,7 @@
             {
                 "language": "cxf",
                 "scopeName": "source.cxf",
-                "path": "./syntaxes/cxf.grammer.json",
+                "path": "./syntaxes/cxf.grammar.json",
                 "embeddedLanguages": {
                     "text.xml": "xml",
                     "source.json": "json"
@@ -57,10 +58,10 @@
         "@types/node": "^6.0.40",
         "tslint": "^5.16.0",
         "typescript": "^3.5.1",
-        "@types/vscode": "^1.32.0"
+        "@types/vscode": "~1.32.0"
     },
     "dependencies": {
-        "html-entities": "^2.1.0",
+        "html-entities": "^2.6.0",
         "tsxml": "^0.1.0"
     }
 }
